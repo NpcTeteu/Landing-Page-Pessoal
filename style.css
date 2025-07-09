@@ -8,13 +8,13 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #fbfcfb;
       color: #333;
     }
 
     header {
-      background: #2c3e50;
-      color: white;
+      background: #fbfcfc;
+      color: #111835;
       padding: 20px;
     }
 
@@ -40,10 +40,27 @@
       gap: 20px;
     }
 
+    .Subtitulo {
+      background-color: #111835;
+      color: #fbfcfc;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .TituloSobre {
+      background-color: #111835;
+      color: #fbfcfb;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 1rem;
+    }
+
     .menu a {
-      color: white;
+      color: #111835;
       text-decoration: none;
       font-weight: 500;
+      font-family: arial;
+      font-weight: bold;
     }
 
     .menu-toggle {
@@ -53,9 +70,10 @@
 
     .hero {
       padding: 80px 0;
-      background: #3498db;
-      color: white;
+      background: #111835;
+      color: #fbfcfc;
       text-align: center;
+      font-family: Baskerville;
     }
 
     .hero h1 {
@@ -68,14 +86,19 @@
       margin-bottom: 30px;
     }
 
+    .FraseDeEfeito {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
     .hero button {
       padding: 12px 24px;
-      background: white;
-      color: #3498db;
+      background: #fbfcfc;
+      color:  #111835;
       border: none;
       cursor: pointer;
       font-weight: bold;
       border-radius: 5px;
+      
     }
 
     section {
@@ -89,16 +112,22 @@
     }
 
     .grid-item {
-      flex: 1 1 250px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
+      flex: 1 1 500px;
+      background: #111835;
+      color: #fbfcfc;
+      border-radius:10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 1rem;
+    }
+
+    .rodape {
+      text-align: center;
     }
 
     footer {
-      background: #2c3e50;
-      color: white;
+      background: #111835;
+      color: #fbfcfc;
       text-align: center;
       padding: 20px;
     }
@@ -108,12 +137,13 @@
       .menu {
         display: none;
         flex-direction: column;
-        background: #2c3e50;
+        background-color: #6a6d7a;
         position: absolute;
         top: 70px;
         right: 20px;
         width: 200px;
         padding: 10px;
+        border-radius: 10px;
       }
 
       .menu.active {
@@ -124,3 +154,5 @@
         display: block;
       }
     }
+
+    
