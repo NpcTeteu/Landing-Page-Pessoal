@@ -10,11 +10,11 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Mateus Almeida Duarte</div>
+        <div class="logo">Bem-vindo ao meu site </div>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="menu" id="menu">
           <a href="#sobre">Sobre</a>
-          <a href="#recursos">Recursos</a>
+          <a href="#recursos">Habilidades</a>
           <a href="#contato">Contato</a>
         </div>
       </nav>
@@ -24,33 +24,39 @@
   <section class="hero">
     <div class="container">
       <h1>Olá sou o Mateus</h1>
-      <p>Tenho o objetivo de me tornar um exímio programador, afim de trabalhar e garantir a qualidade da empresa</p>
-      <button>Saiba Mais</button>
+      <p id="FraseDeEfeito">"A Solução não é reclamar, mas sim mudar"</p>
     </div>
   </section>
+<br>
+<br>
 
   <section id="sobre">
     <div class="container">
-      <h2>Sobre mim</h2>
-      <p>Me chamo Mateus Almeida Duarte, tenho 16 anos e moro em Críciuma desde que nasci. </p>
-    </div>
+      <div class="TituloSobre">
+      <h2>Prazer em conhece-lo...</h2>
+      <br>
+      <p>Me chamo Mateus Almeida Duarte, tenho 16 anos e meu o objetivo é me tornar um exímio programador, afim de trabalhar e garantir a qualidade da empresa. Atualmente estou cursando  meu segundo ano do curso técnico de Ciências de Dados integrado com o ensino médio, na escola Heriberto Hülse.
+        </p>
+      </div>
   </section>
 
   <section id="recursos">
     <div class="container">
-      <h2>Recursos</h2>
+      <h2 class="Subtitulo">Minhas Habilidades</h2>
+      <br>
       <div class="grid">
         <div class="grid-item">
-          <h3>Recurso 1</h3>
-          <p>Descrição breve do recurso.</p>
+          <h3>  Persistente</h3>
+          <p>não recuo diante de dificuldades. Se há um problema, vou me dedicar até encontrar uma solução.</p>
         </div>
         <div class="grid-item">
-          <h3>Recurso 2</h3>
-          <p>Descrição breve do recurso.</p>
+          <h3>Intelectualmente inquieto</h3>
+          <p>não me contento com o que já sei. Se existe algo novo para aprender, vou atrás.</p>
         </div>
         <div class="grid-item">
-          <h3>Recurso 3</h3>
-          <p>Descrição breve do recurso.</p>
+          <h3>Empatico
+          </h3>
+          <p>Tenho facilidade em me colocar no lugar dos outros e entender diferentes perspectivas, o que me ajuda a lidar bem com pessoas e resolver conflitos de forma respeitosa</p>
         </div>
       </div>
     </div>
@@ -58,9 +64,13 @@
 
   <section id="contato">
     <div class="container">
-      <h2>Contato</h2>
-      <p>Email: contato@exemplo.com</p>
-      <p>Telefone: (00) 00000-0000</p>
+      <div class="rodape">
+      <h2>Bora conversar !
+      </h2>
+      <br>
+      <p>Email: almeidaduartemateus7@gamil.com</p>
+      <p>Telefone: (55) 48-996329089</p>
+      </div>
     </div>
   </section>
 
@@ -68,10 +78,24 @@
     <p>&copy; 2025 MinhaMarca. Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
-  </script>
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+
+      document.getElementById("menu").classList.remove("active");
+    });
+  });
+</script>
 </body>
 </html>
